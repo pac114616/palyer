@@ -5,7 +5,6 @@
 #-------------------------------------------------
 
 QT       += core gui
-
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = playerTest
@@ -26,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     ff_ffplayer.cpp \
     ffmsg_queue.cpp \
+    globalhelper.cpp \
     ijkmediaplayer.cpp \
         main.cpp \
         mainwind.cpp \
@@ -40,6 +40,7 @@ HEADERS += \
     ff_ffplayer.h \
     ffmsg.h \
     ffmsg_queue.h \
+    globalhelper.h \
     ijkmediaplayer.h \
         mainwind.h \
     ctrlbar.h \

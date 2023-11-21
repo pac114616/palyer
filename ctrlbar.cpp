@@ -28,3 +28,36 @@ void CtrlBar::on_stopBtn_clicked()
     emit SigStop();
 }
 
+
+void CtrlBar::on_listVisible_clicked()
+{
+
+    _listVisible = !_listVisible;
+    emit setListVisible(_listVisible);
+}
+
+
+void CtrlBar::on_cut_clicked()
+{
+
+}
+
+
+void CtrlBar::on_quickForward_clicked()
+{
+
+}
+
+
+void CtrlBar::on_quickBackward_clicked()
+{
+
+}
+
+
+void CtrlBar::on_comboBox_currentTextChanged(const QString &arg1)
+{
+
+}
+
+

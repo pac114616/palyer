@@ -14,6 +14,7 @@ MainWind::MainWind(QWidget *parent) :
 //    connect(ui->ctrlBarWind,SIGNAL(SigPlayOrPause()),this,SLOT(on_play_or_pause()));
     connect(ui->ctrlBarWind,&CtrlBar::SigPlayOrPause,this,&MainWind::on_play_or_pause);
     connect(ui->ctrlBarWind,&CtrlBar::SigStop,this,&MainWind::on_stop);
+    connect(ui->ctrlBarWind,SIGNAL(setListVisible(bool)),this,SLOT(getListVisible(bool)));
 }
 
 MainWind::~MainWind()
@@ -100,6 +101,64 @@ void MainWind::on_stop()
         delete mp_;
         mp_ = NULL;
     }
+}
+
+void MainWind::resizeUINOFullScreen()
+{
+    int width = this->width();
+    int playListWidth = ui->playList->width();
+//    int playListWidth = ui->playList->width();
+//    int ctrlBarHeight = ui->ctrlBarWind->height();
+    int ctrlBarHeight = 90;
+    int height = this->height();
+//    if(_isListHide)
+
+
+//    QRect ctlBar = ui->ctrlBarWind->geometry();
+//    ctlBar.setHeight(ctrlBarHeight);
+
+//    ctlBar.setY(height-ui->menuBar->height()-ctrlBarHeight);//767
+//    ctlBar.setY(height-ctrlBarHeight);//767
+//    ctlBar.setWidth(width);
+//    ctlBar.setX(0);
+//    ctlBar.setHeight(ctrlBarHeight);
+    qDebug()<<"----------";
+    qDebug()<<"width"<<width;
+//    qDebug() << "ctrlBar rect: " << ctlBar;
+//    QRect playCtl = ui->showWind->geometry();
+    qDebug()<<"height-"<<height<<"ctrlBar Heigth"<<ctrlBarHeight;
+    if(_isListVisible)
+    {
+        width = this->width()-playListWidth;
+    }
+
+//    playCtl.setY(height-ui->menuBar->height());
+
+    height = this->height() - ui->menuBar->height()-ctrlBarHeight;
+//    ui->showWind->setGeometry(0,ui->menuBar->height(),width,height);
+    ui->showWind->setGeometry(0,0,width,height);
+//    ui->playList->setGeometry(ui->showWind->width(),ui->menuBar->height(),playListWidth,height);
+    ui->playList->setGeometry(ui->showWind->width(),0,playListWidth,height);
+    ui->ctrlBarWind->setGeometry(0,height,this->width(),ctrlBarHeight);
+
+    qDebug() << "show rect: " << ui->showWind->geometry();
+    qDebug() << "playList rect: " << ui->playList->geometry();
+    qDebug() << "ctrlBar rect: " << ui->ctrlBarWind->geometry();
+}
+
+void MainWind::resizeEvent(QResizeEvent *event)
+{
+    resizeUINOFullScreen();
+}
+
+void MainWind::getListVisible(bool visible)
+{
+    _isListVisible = visible;
+    if(_isListVisible)
+        ui->playList->show();
+    else
+        ui->playList->hide();
+    resizeUINOFullScreen();
 }
 
 int MainWind::OutputVideo(const Frame *frame)

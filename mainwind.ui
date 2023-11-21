@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>1280</width>
-    <height>800</height>
+    <height>831</height>
    </rect>
   </property>
   <property name="baseSize">
    <size>
     <width>1280</width>
-    <height>800</height>
+    <height>831</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -34,141 +34,192 @@
    </property>
    <property name="baseSize">
     <size>
-     <width>1080</width>
-     <height>740</height>
+     <width>2180</width>
+     <height>810</height>
     </size>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <property name="leftMargin">
-     <number>0</number>
+   <widget class="DisplayWind" name="showWind" native="true">
+    <property name="enabled">
+     <bool>true</bool>
     </property>
-    <property name="topMargin">
-     <number>0</number>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1080</width>
+      <height>720</height>
+     </rect>
     </property>
-    <property name="rightMargin">
-     <number>0</number>
+    <property name="baseSize">
+     <size>
+      <width>1080</width>
+      <height>720</height>
+     </size>
     </property>
-    <property name="bottomMargin">
-     <number>0</number>
+   </widget>
+   <widget class="PlayListWind" name="playList" native="true">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>0</y>
+      <width>200</width>
+      <height>720</height>
+     </rect>
     </property>
-    <property name="spacing">
-     <number>0</number>
+    <property name="maximumSize">
+     <size>
+      <width>100000</width>
+      <height>16777215</height>
+     </size>
     </property>
-    <item row="0" column="0">
-     <widget class="QWidget" name="showCtrlBarBGWidget" native="true">
-      <property name="minimumSize">
-       <size>
-        <width>108</width>
-        <height>74</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>1080</width>
-        <height>740</height>
-       </size>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="DisplayWind" name="showWind" native="true">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="baseSize">
-          <size>
-           <width>1080</width>
-           <height>680</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="CtrlBar" name="ctrlBarWind" native="true">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>60</height>
-          </size>
-         </property>
-         <property name="sizeIncrement">
-          <size>
-           <width>1080</width>
-           <height>60</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-   </layout>
+    <property name="baseSize">
+     <size>
+      <width>200</width>
+      <height>720</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="CtrlBar" name="ctrlBarWind" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>720</y>
+      <width>16777215</width>
+      <height>16777215</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>90</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>90</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>1280</width>
+      <height>90</height>
+     </size>
+    </property>
+   </widget>
   </widget>
-  <widget class="QDockWidget" name="titleDockWidget">
-   <property name="minimumSize">
-    <size>
-     <width>128</width>
-     <height>6</height>
-    </size>
-   </property>
-   <property name="baseSize">
-    <size>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
      <width>1280</width>
-     <height>60</height>
-    </size>
+     <height>21</height>
+    </rect>
    </property>
-   <attribute name="dockWidgetArea">
-    <number>4</number>
-   </attribute>
-   <widget class="TitleBar" name="titleContents"/>
-  </widget>
-  <widget class="QDockWidget" name="playListDockWidget">
    <property name="minimumSize">
     <size>
-     <width>20</width>
-     <height>74</height>
+     <width>0</width>
+     <height>21</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>21</height>
     </size>
    </property>
    <property name="baseSize">
     <size>
-     <width>200</width>
-     <height>740</height>
+     <width>0</width>
+     <height>25</height>
     </size>
    </property>
-   <attribute name="dockWidgetArea">
-    <number>2</number>
-   </attribute>
-   <widget class="PlayListWind" name="playListContents"/>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionopen_file"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>画面</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>方向</string>
+     </property>
+     <addaction name="action_6"/>
+     <addaction name="action_7"/>
+     <addaction name="action_8"/>
+    </widget>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>色调</string>
+     </property>
+     <addaction name="action_9"/>
+     <addaction name="action_10"/>
+     <addaction name="action_11"/>
+    </widget>
+    <addaction name="menu_3"/>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
+    <addaction name="action_4"/>
+    <addaction name="menu_4"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
+  <action name="actionopen_file">
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>反转</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>暖色</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>冷色</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>翻转</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>旋转</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>正常</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="text">
+    <string>暖色</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="text">
+    <string>冷色</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="text">
+    <string>正常</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -176,12 +227,6 @@
    <class>CtrlBar</class>
    <extends>QWidget</extends>
    <header location="global">ctrlbar.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>TitleBar</class>
-   <extends>QWidget</extends>
-   <header location="global">titlebar.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>

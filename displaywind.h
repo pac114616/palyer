@@ -6,6 +6,7 @@
 #include "ijkmediaplayer.h"
 #include "imagescaler.h"
 #include "libyuvscale.h"
+//#include <QVideoWidget>
 namespace Ui {
 class DisplayWind;
 }
